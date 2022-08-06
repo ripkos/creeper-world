@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="standard-fond" stylesheets="@../css/GamePanel.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.GameController">
+   <children>
+      <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefHeight="980.0" prefWidth="1920.0" vbarPolicy="NEVER">
+         <content>
+            <AnchorPane fx:id="anchor" layoutX="64.0" layoutY="64.0" onMouseMoved="#mouseMoved" onMousePressed="#mousePressed">
+               <children>
+                  <AnchorPane fx:id="conL">
+                     <children>
+                        <AnchorPane fx:id="gridL">
+                           <children>
+                            <AnchorPane fx:id="bgL" minHeight="0.0" minWidth="0.0" prefHeight="257.0" prefWidth="262.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="1920.0" styleClass="bottomMenu">
+         <children>
+            <StackPane prefHeight="100.0" prefWidth="960.0">
+               <children>
+                  <HBox fx:id="buildB" alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="960.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="682.0">
+                           <children>
+                              <ToolBar prefHeight="50.0" prefWidth="255.0" styleClass="bottomMenu">
+                                <items>
+                                  <Button accessibleText="Collector" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="structure-button" text="Collector">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/collector.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button accessibleText="Relay" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="structure-button" text="Relay">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/relay.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button accessibleText="Storage" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="structure-button" text="Storage">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/storage.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button accessibleText="Speed" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="structure-button" text="Speed">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/accelerator.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button accessibleText="Reactor" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="structure-button" text="Reactor">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/reactor.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                </items>
+                              </ToolBar>
+                              <ToolBar layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="356.0" styleClass="bottomMenu">
+                                 <items>
+                                    <Button accessibleText="Cannon" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="weapon-button" text="Cannon">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/cannon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button accessibleText="Mortar" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="weapon-button" text="Mortar">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/mortar.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button accessibleText="Beam" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="weapon-button" text="Beam">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/beam.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button accessibleText="Bomber" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="weapon-button" text="Bomber">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/bomber.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="120.0" styleClass="locked-button" text="Locked" />
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="selectB" prefHeight="100.0" prefWidth="200.0" visible="false">
+                     <children>
+                        <VBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" styleClass="text">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#Disarm" prefHeight="33.0" prefWidth="106.0" styleClass="locked-button" text="Disarm" />
+                              <Button mnemonicParsing="false" onAction="#Destroy" prefHeight="33.0" prefWidth="105.0" styleClass="weapon-button" text="Destroy" />
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="100.0" prefWidth="760.0" styleClass="timer-bg">
+                           <children>
+                              <TextField fx:id="fName" editable="false" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="284.0" text="Name">
+                                 <styleClass>
+                                    <String fx:value="text1" />
+                                    <String fx:value="textG" />
+                                 </styleClass>
+                              </TextField>
+                              <TextField fx:id="fHP" editable="false" layoutX="178.0" layoutY="13.0" prefHeight="30.0" prefWidth="120.0" text="HP">
+                                 <styleClass>
+                                    <String fx:value="textG" />
+                                    <String fx:value="text2" />
+                                 </styleClass>
+                              </TextField>
+                              <TextField fx:id="fCost" editable="false" layoutX="304.0" layoutY="13.0" prefHeight="30.0" prefWidth="162.0" promptText="Cost">
+                                 <styleClass>
+                                    <String fx:value="text3" />
+                                    <String fx:value="textG" />
+                                 </styleClass>
+                              </TextField>
+                              <TextField fx:id="fExtra" editable="false" layoutX="469.0" layoutY="13.0" prefHeight="30.0" prefWidth="267.0" text="Extra">
+                                 <styleClass>
+                                    <String fx:value="text3" />
+                                    <String fx:value="textG" />
+                                 </styleClass>
+                              </TextField>
+                              <TextArea fx:id="fDesc" editable="false" layoutX="14.0" layoutY="43.0" prefHeight="42.0" prefWidth="682.0" text="Description">
+                                 <styleClass>
+                                    <String fx:value="textG" />
+                                    <String fx:value="text5" />
+                                 </styleClass>
+                              </TextArea>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+            <VBox layoutX="960.0" prefHeight="100.0" prefWidth="100.0" styleClass="timer-bg">
+               <children>
+                  <AnchorPane prefHeight="98.0" prefWidth="87.0" style="-fx-accent: #f6a338;">
+                     <children>
+                        <ProgressBar fx:id="pbLVL" layoutX="10.0" layoutY="33.0" prefHeight="30.0" prefWidth="90.0" progress="0.0" rotate="270.0" />
+                        <Label fx:id="labelLVL" layoutX="52.0" layoutY="42.0" text="0" />
+                        <Label layoutX="-15.0" layoutY="35.0" rotate="270.0" styleClass="Energy-font" text="Elevation" textFill="#f6a338" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <StackPane layoutX="1060.0" prefHeight="100.0" prefWidth="621.0">
+               <children>
+                  <HBox fx:id="mapEditY" prefHeight="100.0" prefWidth="960.0" spacing="4.0">
+                     <children>
+                        <VBox prefHeight="108.0" prefWidth="277.0" spacing="2.0" styleClass="timer-bg">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ProgressBar fx:id="energyBar" layoutX="75.0" prefHeight="30.0" prefWidth="200.0" progress="0.0" style="-fx-accent: #2bd03b;" />
+                                    <Label fx:id="PB_Enr" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="6.0" prefHeight="17.0" prefWidth="61.0" text="0/20" />
+                                    <Label styleClass="Energy-font" text="Energy" textFill="#2bd03b" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="20.0">
+                                 <children>
+                                    <ProgressBar fx:id="collectionBar" layoutX="75.0" prefHeight="20.0" prefWidth="200.0" progress="0.0" style="-fx-accent: #79ff9d;" />
+                                    <Label fx:id="PB_Col" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="2.0" prefHeight="17.0" prefWidth="61.0" text="0" textAlignment="CENTER" />
+                                    <Label styleClass="Other-font" text="Collection" textFill="#79ff9d" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ProgressBar fx:id="depletionBar" layoutX="75.0" prefHeight="20.0" prefWidth="200.0" progress="0.0" style="-fx-accent: #ffef1d;" />
+                                    <Label fx:id="PB_Dep" alignment="CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="2.0" prefHeight="17.0" prefWidth="66.0" text="0" />
+                                    <Label styleClass="Other-font" text="Depletion" textFill="#ffef1d" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="21.0" prefWidth="520.0">
+                                 <children>
+                                    <ProgressBar fx:id="saturationBar" layoutX="75.0" prefHeight="20.0" prefWidth="200.0" progress="0.0" style="-fx-accent: #ff2929;" />
+                                    <Label fx:id="PB_Dif" alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="2.0" prefHeight="17.0" prefWidth="61.0" text="0" />
+                                    <Label styleClass="Other-font" text="Saturation" textFill="#ff2929" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <BorderPane prefHeight="100.0" prefWidth="107.0" styleClass="timer-bg">
+                           <top>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="64.0" styleClass="text-Timer" text="Time" textAlignment="CENTER" textFill="#360eff" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets top="10.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </top>
+                           <center>
+                              <Label fx:id="PB_Timer" alignment="CENTER" prefHeight="30.0" prefWidth="81.0" styleClass="text-Timer2" text="0:0" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="20.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </center>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </BorderPane>
+                        <Pane prefHeight="100.0" prefWidth="227.0" styleClass="timer-bg">
+                           <children>
+                              <Label layoutX="80.0" layoutY="7.0" styleClass="text-Timer" text="Speed" />
+                              <HBox layoutX="14.0" layoutY="50.0" prefHeight="42.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Button accessibleText="0" mnemonicParsing="false" onAction="#setSpeed" prefHeight="33.0" prefWidth="38.0" styleClass="weapon-button" text="P" />
+                                    <Button accessibleText="1" mnemonicParsing="false" onAction="#setSpeed" prefHeight="33.0" prefWidth="45.0" styleClass="structure-button" text="1x" />
+                                    <Button accessibleText="2" mnemonicParsing="false" onAction="#setSpeed" prefHeight="33.0" prefWidth="45.0" styleClass="structure-button" text="2x" />
+                                    <Button accessibleText="4" mnemonicParsing="false" onAction="#setSpeed" prefHeight="33.0" prefWidth="45.0" styleClass="structure-button" text="4x" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="mapEditN" prefHeight="100.0" prefWidth="200.0" visible="false">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Slider fx:id="levelSlider" blockIncrement="1.0" layoutX="11.0" layoutY="50.0" majorTickUnit="1.0" max="20.0" min="1.0" minorTickCount="0" prefHeight="42.0" prefWidth="179.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="Other-font" value="1.0">
+                                 <effect>
+                                    <Bloom threshold="0.01" />
+                                 </effect>
+                              </Slider>
+                              <CheckBox layoutX="42.0" layoutY="7.0" mnemonicParsing="false" onAction="#editLevel" styleClass="Energy-font" text="Edit level" textFill="#ebb027" />
+                           </children>
+                        </AnchorPane>
+                        <VBox prefHeight="100.0" prefWidth="275.0">
+                           <children>
+                              <ToolBar prefHeight="50.0" prefWidth="255.0" styleClass="bottomMenu">
+                                 <items>
+                                    <Button accessibleText="Base" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="structure-button" text="Base">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/friend/base.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button accessibleText="Totem" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#GetStructure" prefWidth="120.0" styleClass="locked-button" text="Totem">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/neutral/totem.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                              <ToolBar prefHeight="50.0" prefWidth="255.0" styleClass="bottomMenu">
+                                 <items>
+                                    <Button accessibleText="Emitter" mnemonicParsing="false" onAction="#GetStructure" prefHeight="38.0" prefWidth="120.0" styleClass="weapon-button" text="Emitter">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/enemy/emitter.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button accessibleText="Tower" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#GetStructure" prefHeight="38.0" prefWidth="120.0" styleClass="weapon-button" text="Tower">
+                                       <graphic>
+                                          <ImageView fitHeight="32.0" fitWidth="32.0">
+                                             <image>
+                                                <Image url="@../../resource/buildings/enemy/sporetower.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+            <VBox layoutX="1800.0" prefHeight="100.0" prefWidth="120.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#SaveMap" prefWidth="120.0" styleClass="structure-button" text="Save Map" />
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="135.0" styleClass="locked-button" text="Help" />
+                  <Button mnemonicParsing="false" onAction="#quitButton" prefWidth="120.0" styleClass="weapon-button" text="Quit" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>

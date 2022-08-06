@@ -1,0 +1,125 @@
+.bottomMenu {
+    -fx-background-color: #323131;
+}
+
+.hbox-button{
+    -fx-background-color: #000000,
+    linear-gradient(#7ebcea, #2f4b8f),
+    linear-gradient(#426ab7, #263e75),
+    linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 3 3 3 3;
+    -fx-text-fill: ghostwhite;
+    -fx-font-size: 18px;
+}
+
+
+.structure-button {
+    -fx-background-color: #000000,
+    linear-gradient(#abea7e, #498f2f),
+    linear-gradient(#5bb742, #2b7526),
+    linear-gradient(#44ab39, #356822);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 3 3 3 3;
+    -fx-text-fill: ghostwhite;
+    -fx-font-size: 18px;
+
+}
+.weapon-button {
+    -fx-background-color: #000000,
+    linear-gradient(#ea7e7e, #8f2f2f),
+    linear-gradient(#b74242, #752626),
+    linear-gradient(#ab3939, #682222);
+    -fx-background-insets: 0, 1, 2, 3;
+    -fx-background-radius: 3, 2, 2, 2;
+    -fx-padding: 3 3 3 3;
+    -fx-text-fill: ghostwhite;
+    -fx-font-size: 18px;
+}
+.text-area .content{
+    -fx-background-color: #333840;
+}
+
+.text1{
+    -fx-font-size: 20px;
+    -fx-text-fill: #5bb742;
+}
+.text2{
+    -fx-text-fill: #ea7e7e;
+    -fx-font-size: 14px;
+}
+.text3{
+    -fx-text-fill: #8dabff;
+    -fx-font-size: 14px;
+}
+.text4{
+    -fx-text-fill: #8f2f2f;
+    -fx-font-size: 14px;
+}
+.text5{
+    -fx-text-fill: #d2c7b8;
+    -fx-font-size: 14px;
+}
+
+.textG{
+    -fx-background-color: #333840;
+}
+
+.text-Timer{
+    -fx-text-fill: #0086ff;
+    -fx-font-size:24px;
+}
+.text-Timer2{
+    -fx-text-fill: #31f8e1;
+    -fx-font-size:20px;
+}
+.timer-bg{
+    -fx-border-color: #ffa41a;
+    -fx-background-color: #333840;
+}
+
+.locked-button {
+    -fx-background-color: #000000,
+    linear-gradient(#504949, #5c5151),
+    linear-gradient(#726666, #6d5f5f),
+    linear-gradient(#6c5858, #615252);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 3 3 3 3;
+    -fx-text-fill: ghostwhite;
+    -fx-font-size: 18px;
+
+}
+
+.standard-fond {
+    -fx-font-family: fantasy;
+}
+
+
+.slider .axis {
+    -fx-text-fill: white;
+
+}
+
+.Energy-font{
+    -fx-font-size:20
+}
+
+.Other-font{
+    -fx-font-size: 14;
+}
+
+
+.defaultBackground {
+    -fx-background-image: url("../../resource/background/space_bg.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.progress-bar .bar {
+
+    -fx-background-insets: 0, 0, 0;
+    -fx-padding: 0;
+}
